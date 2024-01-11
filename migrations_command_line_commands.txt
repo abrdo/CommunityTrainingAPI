@@ -1,0 +1,22 @@
+ migrations mappát kitörölni
+
+
+package manager consolba:
+
+add-migration
+
+név
+
+update-database
+
+
+appsettings.jsonben
+Recipebook nevét átírni (2-szer)
+program.cs-ben is átírni a nevét
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Domonkos\\Documents\\PPKE_ITK_tanulmanyok\\Mernokinfo_MSC\\5. félév\\dotNET\\dotNET_homework\\MyHomework\\CommunityTrainingApp\\CommunityTrainingApp\\CommunityTrainingApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Domonkos\\Documents\\PPKE_ITK_tanulmanyok\\Mernokinfo_MSC\\5. félév\\dotNET\\dotNET_homework\\MyHomework\\CommunityTrainingApp\\CommunityTrainingApp\\CommunityTrainingApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Domonkos\\Documents\\PPKE_ITK_tanulmanyok\\Mernokinfo_MSC\\5. félév\\dotNET\\dotNET_homework\\MyHomework\\CommunityTrainingApp\\CommunityTrainingApp\\CommunityTrainingApp.csproj",
+        "projectName": "CommunityTrainingApp",
+        "projectPath": "C:\\Users\\Domonkos\\Documents\\PPKE_ITK_tanulmanyok\\Mernokinfo_MSC\\5. félév\\dotNET\\dotNET_homework\\MyHomework\\CommunityTrainingApp\\CommunityTrainingApp\\CommunityTrainingApp.csproj",
+        "packagesPath": "C:\\Users\\Domonkos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Domonkos\\Documents\\PPKE_ITK_tanulmanyok\\Mernokinfo_MSC\\5. félév\\dotNET\\dotNET_homework\\MyHomework\\CommunityTrainingApp\\CommunityTrainingApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Domonkos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
