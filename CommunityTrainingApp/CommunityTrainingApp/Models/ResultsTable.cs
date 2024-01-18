@@ -6,6 +6,7 @@ namespace CommunityTrainingAPI.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int TrainingPlanId { get; set; }
         public TrainingPlan TrainingPlan { get; set; }
         public int RuninngResult { get; set; }
         public int PushUpsResult { get; set; }
