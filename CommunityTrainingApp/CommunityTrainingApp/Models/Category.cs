@@ -1,4 +1,4 @@
-﻿using CommunityTrainingApp.Models;
+﻿using CommunityTrainingAPI.Models;
 
 namespace CommunityTrainingAPI.Models
 {

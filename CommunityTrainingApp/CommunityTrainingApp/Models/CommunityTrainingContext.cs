@@ -1,5 +1,5 @@
 ﻿using CommunityTrainingAPI.Models.Authentication;
-using CommunityTrainingApp.Models;
+using CommunityTrainingAPI.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

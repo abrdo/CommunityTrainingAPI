@@ -1,4 +1,4 @@
-﻿namespace RecipeBook.API.ViewModels.Authentication
+﻿namespace CommunityTrainingAPI.ViewModels.Authentication
 {
     public class LoginViewModel
     {

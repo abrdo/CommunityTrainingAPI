@@ -1,7 +1,7 @@
 ﻿using CommunityTrainingAPI.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace CommunityTrainingApp.Models
+namespace CommunityTrainingAPI.Models
 {
     public class TrainingPlan
     {

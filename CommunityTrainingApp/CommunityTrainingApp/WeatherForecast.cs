@@ -1,4 +1,4 @@
-namespace CommunityTrainingApp
+namespace CommunityTrainingAPI
 {
     public class WeatherForecast
     {

@@ -1,4 +1,4 @@
-﻿using CommunityTrainingApp.Models;
+﻿using CommunityTrainingAPI.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace CommunityTrainingAPI.Models
