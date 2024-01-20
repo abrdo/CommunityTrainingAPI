@@ -15,4 +15,4 @@ namespace CommunityTrainingAPI.Dtos
         public int LegLifts { get; set; }
     }
 }
-}
+
