@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using CommunityTrainingAPI.Models.Authentication;
 
-namespace RecipeBook.API.Models
+namespace CommunityTrainingAPI.Models
 {
     public static class SeedingExtensions
     {
