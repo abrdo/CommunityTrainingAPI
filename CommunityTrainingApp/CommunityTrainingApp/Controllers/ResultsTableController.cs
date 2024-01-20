@@ -89,7 +89,7 @@ namespace CommunityTraining.API.Controllers
         [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
-            _logger.LogInformation($"Post called. It tries to delete the resultsTable with id={id}");
+            _logger.LogInformation($"Delete called. It tries to delete the resultsTable with id={id}");
             //HttpContext.User.Claims
             return await _resultsTableService.DeleteResultsTableAsync(id)
                 ? NoContent()

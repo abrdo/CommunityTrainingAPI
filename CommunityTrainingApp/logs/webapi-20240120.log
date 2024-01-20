@@ -1198,3 +1198,175 @@ WHERE [r].[Id] = @__id_0
 [2024-01-20 07:06:07.697 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI) in 2992.1788ms
 [2024-01-20 07:06:07.700 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI)'
 [2024-01-20 07:06:07.702 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables/12 - - - 200 - application/json;+charset=utf-8 3017.9129ms
+[2024-01-20 07:09:31.286 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 07:09:36.251 +01:00  INF]  Executed DbCommand (278ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:09:36.507 +01:00  INF]  Executed DbCommand (19ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:09:37.568 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 07:09:37.570 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 07:09:37.575 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 07:09:37.577 +01:00  INF]  Hosting environment: Development
+[2024-01-20 07:09:37.579 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 07:09:57.087 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 07:09:58.369 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 1291.9450ms
+[2024-01-20 07:09:58.416 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 07:09:58.416 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 07:09:58.436 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 19.3832ms
+[2024-01-20 07:09:59.492 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1075.6094ms
+[2024-01-20 07:09:59.639 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 07:10:00.138 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 499.4886ms
+[2024-01-20 07:12:11.449 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - -
+[2024-01-20 07:12:12.000 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-20 07:12:12.017 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-20 07:12:12.026 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - - - 401 0 - 587.3399ms
+[2024-01-20 07:13:29.417 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 07:13:34.488 +01:00  INF]  Executed DbCommand (265ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:13:34.659 +01:00  INF]  Executed DbCommand (24ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:13:35.570 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 07:13:35.573 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 07:13:35.578 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 07:13:35.581 +01:00  INF]  Hosting environment: Development
+[2024-01-20 07:13:35.583 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 07:13:49.229 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 07:13:49.971 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 746.7527ms
+[2024-01-20 07:13:50.009 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 07:13:50.014 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 07:13:50.048 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 38.6786ms
+[2024-01-20 07:13:50.193 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 179.2317ms
+[2024-01-20 07:13:50.308 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 07:13:50.772 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 463.6316ms
+[2024-01-20 07:14:05.207 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - -
+[2024-01-20 07:14:05.397 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-20 07:14:05.411 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-20 07:14:05.413 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - - - 401 0 - 205.9890ms
+[2024-01-20 07:16:13.401 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 07:16:15.963 +01:00  INF]  Executed DbCommand (199ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:16:16.122 +01:00  INF]  Executed DbCommand (37ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:16:16.689 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 07:16:16.691 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 07:16:16.696 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 07:16:16.699 +01:00  INF]  Hosting environment: Development
+[2024-01-20 07:16:16.701 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 07:16:20.963 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 07:16:21.965 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 1013.9651ms
+[2024-01-20 07:16:22.007 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 07:16:22.014 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 07:16:22.049 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 41.1319ms
+[2024-01-20 07:16:22.704 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 691.5186ms
+[2024-01-20 07:16:22.982 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 07:16:24.054 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1071.3659ms
+[2024-01-20 07:16:37.460 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - -
+[2024-01-20 07:16:37.600 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-20 07:16:37.611 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-20 07:16:37.615 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - - - 401 0 - 154.9948ms
+[2024-01-20 07:17:33.012 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - -
+[2024-01-20 07:17:33.240 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-20 07:17:33.256 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-20 07:17:33.266 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - - - 401 0 - 259.3202ms
+[2024-01-20 07:17:42.445 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - -
+[2024-01-20 07:17:42.459 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-20 07:17:42.461 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-20 07:17:42.466 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - - - 401 0 - 19.9995ms
+[2024-01-20 07:21:52.010 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 07:21:56.703 +01:00  INF]  Executed DbCommand (199ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:21:56.832 +01:00  INF]  Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:21:57.429 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 07:21:57.431 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 07:21:57.437 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 07:21:57.440 +01:00  INF]  Hosting environment: Development
+[2024-01-20 07:21:57.442 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 07:21:59.878 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 07:22:01.726 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 1869.4912ms
+[2024-01-20 07:22:01.768 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 07:22:01.769 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 07:22:01.799 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 30.3988ms
+[2024-01-20 07:22:01.906 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 137.9042ms
+[2024-01-20 07:22:02.026 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 07:22:02.621 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 599.5193ms
+[2024-01-20 07:22:19.448 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - -
+[2024-01-20 07:22:19.574 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-20 07:22:19.583 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-20 07:22:19.585 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/12 - - - 401 0 - 137.6290ms
+[2024-01-20 07:23:35.320 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 07:23:39.620 +01:00  INF]  Executed DbCommand (217ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:23:39.722 +01:00  INF]  Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 07:23:40.241 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 07:23:40.244 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 07:23:40.247 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 07:23:40.249 +01:00  INF]  Hosting environment: Development
+[2024-01-20 07:23:40.251 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 07:23:42.796 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 07:23:43.558 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 771.4534ms
+[2024-01-20 07:23:43.581 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 07:23:43.581 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 07:23:43.641 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 59.8684ms
+[2024-01-20 07:23:43.776 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 195.2902ms
+[2024-01-20 07:23:43.914 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 07:23:44.358 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 443.5628ms
+[2024-01-20 07:24:50.267 +01:00  INF]  Request starting HTTP/2 POST https://localhost:7282/api/trainingplans/1/resultstables application/json 115
+[2024-01-20 07:24:50.766 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI)'
+[2024-01-20 07:24:50.966 +01:00  INF]  Route matched with {action = "Post", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32, CommunityTrainingAPI.Dtos.NewResultsTableDTO) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 07:25:09.274 +01:00  INF]  Post called.
+[2024-01-20 07:25:57.780 +01:00  INF]  Executed DbCommand (122ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CategoryId], [t].[LegLifts], [t].[Name], [t].[PullUps], [t].[PushUps], [t].[RunningInKms]
+FROM [TrainingPlans] AS [t]
+WHERE [t].[Id] = @__p_0
+[2024-01-20 07:25:58.522 +01:00  INF]  Executed DbCommand (70ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 255), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ResultsTables] ([LegLiftsResult], [Name], [PullUpsResult], [PushUpsResult], [RuninngResult], [TrainingPlanId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+[2024-01-20 07:32:43.918 +01:00  INF]  new resultsTable with name=Steven added to database.
+[2024-01-20 07:32:44.461 +01:00  INF]  Executing CreatedAtActionResult, writing value of type 'CommunityTrainingAPI.ViewModels.ResultsTableVM'.
+[2024-01-20 07:32:44.900 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI) in 473910.2907ms
+[2024-01-20 07:32:44.916 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI)'
+[2024-01-20 07:32:45.008 +01:00  INF]  Request finished HTTP/2 POST https://localhost:7282/api/trainingplans/1/resultstables application/json 115 - 201 - application/json;+charset=utf-8 474750.7350ms
+[2024-01-20 07:33:42.318 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 07:33:42.393 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 07:33:42.487 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 07:33:42.587 +01:00  INF]  GetAll called.
+[2024-01-20 07:33:43.280 +01:00  INF]  Executed DbCommand (125ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [ResultsTables] AS [r]
+ORDER BY [r].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2024-01-20 07:33:43.298 +01:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CommunityTrainingAPI.ViewModels.ResultsTableRowVM, CommunityTrainingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2024-01-20 07:33:43.317 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 825.932ms
+[2024-01-20 07:33:43.320 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 07:33:43.323 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 200 - application/json;+charset=utf-8 1012.5223ms
