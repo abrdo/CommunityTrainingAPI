@@ -43,6 +43,9 @@ namespace CommunityTraining.API.Controllers
         [HttpGet("resultstables/{id}")]
         public async Task<IActionResult> GetById(int id)
         {
+
+            _logger.LogInformation($"GetById with id={id} called.");
+
             var r = await _resultsTableService.GetResultsTableByIdAsync(id);
 
             if (r == null)
@@ -60,9 +63,13 @@ namespace CommunityTraining.API.Controllers
             //if (!ModelState.IsValid)
             //    return BadRequest(ModelState);
 
+            _logger.LogInformation($"Post called.");
+
             var createdResultsTable = await _resultsTableService.CreateResultsTableAsync(trainingPlanId, resultsTable);
             if (createdResultsTable == null)
                 return NotFound();
+
+            _logger.LogInformation($"new resultsTable with name={resultsTable.Name} added to database.");
 
             return CreatedAtAction(nameof(GetById), new { Id = createdResultsTable.Id }, createdResultsTable);
         }
@@ -71,6 +78,7 @@ namespace CommunityTraining.API.Controllers
         [HttpPut("resultstables/{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateResultsTableDTO resultsTable)
         {
+            _logger.LogInformation($"Put called.");
             return await _resultsTableService.UpdateResultsTableAsync(id, resultsTable)
                 ? NoContent()
                 : NotFound();
@@ -81,6 +89,7 @@ namespace CommunityTraining.API.Controllers
         [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
+            _logger.LogInformation($"Post called. It tries to delete the resultsTable with id={id}");
             //HttpContext.User.Claims
             return await _resultsTableService.DeleteResultsTableAsync(id)
                 ? NoContent()
