@@ -8,5 +8,6 @@ namespace CommunityTrainingAPI.ViewModels
         [Required]
         [MaxLength(255)]
         public string Name { get; set; }
+        // public string TrainingPlanName { get; set; }
     }
 }
