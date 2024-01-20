@@ -34,7 +34,9 @@ namespace CommunityTraining.API.Controllers
 
             _logger.LogInformation("GetAll called.");
 
-            return await _resultsTableService.GetAllResultsTablesAsync(option);
+            var res = await _resultsTableService.GetAllResultsTablesAsync(option);
+
+            return res;
         }
 
         // GET api/<ResultsTablesController>/5

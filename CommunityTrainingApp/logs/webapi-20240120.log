@@ -566,3 +566,314 @@ System.NotImplementedException: The method or operation is not implemented.
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 [2024-01-20 05:22:40.945 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables/11 - - - 500 - text/plain;+charset=utf-8 996.8729ms
+[2024-01-20 05:54:16.347 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 05:54:25.825 +01:00  INF]  Executed DbCommand (294ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 05:54:26.052 +01:00  INF]  Executed DbCommand (24ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 05:54:27.350 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 05:54:27.353 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 05:54:27.359 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 05:54:27.363 +01:00  INF]  Hosting environment: Development
+[2024-01-20 05:54:27.366 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 05:54:34.416 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 05:54:36.994 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 2587.8788ms
+[2024-01-20 05:54:37.155 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 05:54:37.155 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 05:54:37.199 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 42.9474ms
+[2024-01-20 05:54:37.427 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 271.9183ms
+[2024-01-20 05:54:37.537 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 05:54:38.000 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 462.3538ms
+[2024-01-20 05:55:00.115 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 05:55:00.363 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 05:55:00.432 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 05:55:28.800 +01:00  INF]  GetAll called.
+[2024-01-20 05:55:36.550 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 36070.9244ms
+[2024-01-20 05:55:36.647 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 05:55:36.730 +01:00  ERR]  An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at CommunityTrainingAPI.Services.Implementations.ResultsTableService.GetAllResultsTablesAsync(GenericQueryOptions`1 options) in C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp\Services\Implementations\ResultsTableService.cs:line 32
+   at CommunityTraining.API.Controllers.ResultsTableController.GetAll(GenericQueryOptions`1 option) in C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp\Controllers\ResultsTableController.cs:line 37
+   at lambda_method82(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2024-01-20 05:55:37.171 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 500 - text/plain;+charset=utf-8 37050.5241ms
+[2024-01-20 05:58:18.132 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 05:58:22.291 +01:00  INF]  Executed DbCommand (221ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 05:58:22.436 +01:00  INF]  Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 05:58:23.028 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 05:58:23.031 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 05:58:23.035 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 05:58:23.037 +01:00  INF]  Hosting environment: Development
+[2024-01-20 05:58:23.039 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 05:58:26.294 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 05:58:27.136 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 855.8887ms
+[2024-01-20 05:58:27.211 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 05:58:27.214 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 05:58:27.290 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 76.4063ms
+[2024-01-20 05:58:27.858 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 647.7472ms
+[2024-01-20 05:58:28.021 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 05:58:28.609 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 588.6165ms
+[2024-01-20 05:58:41.368 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 05:58:41.589 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 05:58:41.640 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 05:59:00.172 +01:00  INF]  GetAll called.
+[2024-01-20 06:24:26.545 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-20 06:24:34.055 +01:00  INF]  Executed DbCommand (1,908ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 06:24:34.289 +01:00  INF]  Executed DbCommand (20ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-20 06:24:35.648 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-20 06:24:35.650 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-20 06:24:35.655 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-20 06:24:35.657 +01:00  INF]  Hosting environment: Development
+[2024-01-20 06:24:35.659 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-20 06:24:42.949 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-20 06:24:44.318 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 1386.2184ms
+[2024-01-20 06:24:44.372 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-20 06:24:44.378 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-20 06:24:44.467 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 94.7659ms
+[2024-01-20 06:24:45.220 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 841.9806ms
+[2024-01-20 06:24:45.350 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-20 06:24:46.471 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1111.2946ms
+[2024-01-20 06:25:02.919 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 06:25:03.210 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:25:03.310 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:25:12.106 +01:00  INF]  GetAll called.
+[2024-01-20 06:25:12.497 +01:00  INF]  Executed DbCommand (71ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [ResultsTables] AS [r]
+ORDER BY [r].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2024-01-20 06:25:12.533 +01:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CommunityTrainingAPI.ViewModels.ResultsTableRowVM, CommunityTrainingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2024-01-20 06:25:12.653 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 9290.689ms
+[2024-01-20 06:25:12.674 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:25:12.720 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 200 - application/json;+charset=utf-8 9801.3691ms
+[2024-01-20 06:25:59.300 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables/12 - -
+[2024-01-20 06:25:59.385 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI)'
+[2024-01-20 06:25:59.468 +01:00  INF]  Route matched with {action = "GetById", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:25:59.885 +01:00  INF]  Executed DbCommand (35ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LegLiftsResult], [r].[Name], [r].[PullUpsResult], [r].[PushUpsResult], [r].[RuninngResult], [r].[TrainingPlanId]
+FROM [ResultsTables] AS [r]
+WHERE [r].[Id] = @__id_0
+[2024-01-20 06:26:00.057 +01:00  ERR]  An exception occurred while iterating over the results of a query for context type 'CommunityTrainingAPI.Models.CommunityTrainingContext'.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ResultsTable -> ResultsTableVM
+CommunityTrainingAPI.Models.ResultsTable -> CommunityTrainingAPI.ViewModels.ResultsTableVM
+   at lambda_method139(Closure, Object, ResultsTableVM, ResolutionContext)
+   at lambda_method98(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ResultsTable -> ResultsTableVM
+CommunityTrainingAPI.Models.ResultsTable -> CommunityTrainingAPI.ViewModels.ResultsTableVM
+   at lambda_method139(Closure, Object, ResultsTableVM, ResolutionContext)
+   at lambda_method98(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2024-01-20 06:26:00.360 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI) in 886.421ms
+[2024-01-20 06:26:00.366 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI)'
+[2024-01-20 06:26:00.381 +01:00  ERR]  An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ResultsTable -> ResultsTableVM
+CommunityTrainingAPI.Models.ResultsTable -> CommunityTrainingAPI.ViewModels.ResultsTableVM
+   at lambda_method139(Closure, Object, ResultsTableVM, ResolutionContext)
+   at lambda_method98(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at CommunityTrainingAPI.Services.Implementations.ResultsTableService.GetResultsTableByIdAsync(Int32 id) in C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp\Services\Implementations\ResultsTableService.cs:line 104
+   at CommunityTraining.API.Controllers.ResultsTableController.GetById(Int32 id) in C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp\Controllers\ResultsTableController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2024-01-20 06:26:00.483 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables/12 - - - 500 - text/plain;+charset=utf-8 1191.6871ms
+[2024-01-20 06:26:16.797 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables/1 - -
+[2024-01-20 06:26:16.815 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI)'
+[2024-01-20 06:26:16.830 +01:00  INF]  Route matched with {action = "GetById", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:26:16.858 +01:00  INF]  Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LegLiftsResult], [r].[Name], [r].[PullUpsResult], [r].[PushUpsResult], [r].[RuninngResult], [r].[TrainingPlanId]
+FROM [ResultsTables] AS [r]
+WHERE [r].[Id] = @__id_0
+[2024-01-20 06:26:16.875 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2024-01-20 06:26:16.898 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI) in 63.7052ms
+[2024-01-20 06:26:16.900 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI)'
+[2024-01-20 06:26:16.903 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables/1 - - - 404 - application/problem+json;+charset=utf-8 105.9114ms
+[2024-01-20 06:26:49.503 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/21 - -
+[2024-01-20 06:26:49.573 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-20 06:26:49.594 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-20 06:26:49.597 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/21 - - - 401 0 - 96.6605ms
+[2024-01-20 06:27:13.397 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 06:27:13.407 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:27:13.412 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:27:26.738 +01:00  INF]  GetAll called.
+[2024-01-20 06:27:26.937 +01:00  INF]  Executed DbCommand (147ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [ResultsTables] AS [r]
+ORDER BY [r].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2024-01-20 06:27:26.946 +01:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CommunityTrainingAPI.ViewModels.ResultsTableRowVM, CommunityTrainingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2024-01-20 06:27:26.950 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 13533.2643ms
+[2024-01-20 06:27:26.952 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:27:26.954 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 200 - application/json;+charset=utf-8 13558.7620ms
+[2024-01-20 06:27:37.371 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 06:27:37.379 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:27:37.386 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:27:37.397 +01:00  INF]  GetAll called.
+[2024-01-20 06:27:37.413 +01:00  INF]  Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [ResultsTables] AS [r]
+ORDER BY [r].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2024-01-20 06:27:37.419 +01:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CommunityTrainingAPI.ViewModels.ResultsTableRowVM, CommunityTrainingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2024-01-20 06:27:37.423 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 27.1249ms
+[2024-01-20 06:27:37.425 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:27:37.427 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 200 - application/json;+charset=utf-8 57.1183ms
+[2024-01-20 06:27:39.447 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 06:27:39.450 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:27:39.454 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:27:39.461 +01:00  INF]  GetAll called.
+[2024-01-20 06:27:39.484 +01:00  INF]  Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [ResultsTables] AS [r]
+ORDER BY [r].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2024-01-20 06:27:39.492 +01:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CommunityTrainingAPI.ViewModels.ResultsTableRowVM, CommunityTrainingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2024-01-20 06:27:39.495 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 35.1071ms
+[2024-01-20 06:27:39.498 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:27:39.502 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 200 - application/json;+charset=utf-8 54.5805ms
+[2024-01-20 06:29:17.625 +01:00  INF]  Request starting HTTP/2 POST https://localhost:7282/api/trainingplans/3/resultstables application/json 122
+[2024-01-20 06:29:17.675 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI)'
+[2024-01-20 06:29:17.812 +01:00  INF]  Route matched with {action = "Post", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32, CommunityTrainingAPI.Dtos.NewResultsTableDTO) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:29:18.371 +01:00  INF]  Executed DbCommand (65ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CategoryId], [t].[LegLifts], [t].[Name], [t].[PullUps], [t].[PushUps], [t].[RunningInKms]
+FROM [TrainingPlans] AS [t]
+WHERE [t].[Id] = @__p_0
+[2024-01-20 06:29:18.385 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2024-01-20 06:29:18.391 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI) in 572.016ms
+[2024-01-20 06:29:18.393 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI)'
+[2024-01-20 06:29:18.396 +01:00  INF]  Request finished HTTP/2 POST https://localhost:7282/api/trainingplans/3/resultstables application/json 122 - 404 - application/problem+json;+charset=utf-8 783.9555ms
+[2024-01-20 06:30:00.804 +01:00  INF]  Request starting HTTP/2 POST https://localhost:7282/api/trainingplans/3/resultstables application/json 122
+[2024-01-20 06:30:00.818 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI)'
+[2024-01-20 06:30:00.822 +01:00  INF]  Route matched with {action = "Post", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32, CommunityTrainingAPI.Dtos.NewResultsTableDTO) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:30:00.872 +01:00  INF]  Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CategoryId], [t].[LegLifts], [t].[Name], [t].[PullUps], [t].[PushUps], [t].[RunningInKms]
+FROM [TrainingPlans] AS [t]
+WHERE [t].[Id] = @__p_0
+[2024-01-20 06:30:00.878 +01:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2024-01-20 06:30:00.882 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI) in 56.4964ms
+[2024-01-20 06:30:00.884 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.Post (CommunityTrainingAPI)'
+[2024-01-20 06:30:00.885 +01:00  INF]  Request finished HTTP/2 POST https://localhost:7282/api/trainingplans/3/resultstables application/json 122 - 404 - application/problem+json;+charset=utf-8 83.2490ms
+[2024-01-20 06:30:19.767 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-20 06:30:19.778 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:30:19.783 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:30:19.793 +01:00  INF]  GetAll called.
+[2024-01-20 06:30:19.847 +01:00  INF]  Executed DbCommand (42ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [ResultsTables] AS [r]
+ORDER BY [r].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2024-01-20 06:30:19.852 +01:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CommunityTrainingAPI.ViewModels.ResultsTableRowVM, CommunityTrainingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2024-01-20 06:30:19.855 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 63.6759ms
+[2024-01-20 06:30:19.856 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-20 06:30:19.859 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 200 - application/json;+charset=utf-8 91.7174ms
+[2024-01-20 06:33:43.889 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables/21 - -
+[2024-01-20 06:33:43.948 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI)'
+[2024-01-20 06:33:43.965 +01:00  INF]  Route matched with {action = "GetById", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-20 06:33:44.214 +01:00  INF]  Executed DbCommand (151ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LegLiftsResult], [r].[Name], [r].[PullUpsResult], [r].[PushUpsResult], [r].[RuninngResult], [r].[TrainingPlanId]
+FROM [ResultsTables] AS [r]
+WHERE [r].[Id] = @__id_0
+[2024-01-20 06:33:44.251 +01:00  ERR]  An exception occurred while iterating over the results of a query for context type 'CommunityTrainingAPI.Models.CommunityTrainingContext'.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ResultsTable -> ResultsTableVM
+CommunityTrainingAPI.Models.ResultsTable -> CommunityTrainingAPI.ViewModels.ResultsTableVM
+   at lambda_method139(Closure, Object, ResultsTableVM, ResolutionContext)
+   at lambda_method98(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ResultsTable -> ResultsTableVM
+CommunityTrainingAPI.Models.ResultsTable -> CommunityTrainingAPI.ViewModels.ResultsTableVM
+   at lambda_method139(Closure, Object, ResultsTableVM, ResolutionContext)
+   at lambda_method98(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2024-01-20 06:33:44.498 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI) in 526.6877ms
+[2024-01-20 06:33:44.506 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetById (CommunityTrainingAPI)'
+[2024-01-20 06:33:44.516 +01:00  ERR]  An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ResultsTable -> ResultsTableVM
+CommunityTrainingAPI.Models.ResultsTable -> CommunityTrainingAPI.ViewModels.ResultsTableVM
+   at lambda_method139(Closure, Object, ResultsTableVM, ResolutionContext)
+   at lambda_method98(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at CommunityTrainingAPI.Services.Implementations.ResultsTableService.GetResultsTableByIdAsync(Int32 id) in C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp\Services\Implementations\ResultsTableService.cs:line 104
+   at CommunityTraining.API.Controllers.ResultsTableController.GetById(Int32 id) in C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp\Controllers\ResultsTableController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2024-01-20 06:33:44.632 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables/21 - - - 500 - text/plain;+charset=utf-8 715.0224ms
