@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "CeEJ81EU0tAEH47Gp+WulgD6ifrJJvmcw+sJ0UnSXwg=",
-  "Source": "CommunityTrainingApp",
-  "BasePath": "_content/CommunityTrainingApp",
+  "Hash": "ppdpPJ/rM8Nl2Av+cXFzwABQvbJEC4/xx1P1aYGtJPw=",
+  "Source": "CommunityTrainingAPI",
+  "BasePath": "_content/CommunityTrainingAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
