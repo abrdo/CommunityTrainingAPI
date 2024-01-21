@@ -1,6 +1,4 @@
-﻿using CommunityTrainingAPI.Dtos.Authentication;
-using CommunityTrainingAPI.Models.Authentication;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,13 +7,12 @@ using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using CommunityTrainingAPI.Dtos.Authentication;
 using CommunityTrainingAPI.Models.Authentication;
-using CommunityTrainingAPI.ViewModels;
+using CommunityTrainingAPI.ViewModels.Authentication;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using CommunityTrainingAPI.ViewModels.Authentication;
 
-namespace CommunityTraining.API.Controllers
+namespace CommunityTrainingAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -29,14 +26,14 @@ namespace CommunityTraining.API.Controllers
         {
             _userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             _roleManager = roleManager ?? throw new ArgumentNullException(nameof(roleManager));
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _configuration = configuration?? throw new ArgumentNullException(nameof(configuration));
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDTO LoginDto)
+        public async Task<IActionResult> Login(LoginDTO loginDto)
         {
-            var user = await _userManager.FindByNameAsync(LoginDto.UserName);
-            if (user != null && await _userManager.CheckPasswordAsync(user, LoginDto.Password))
+            var user = await _userManager.FindByNameAsync(loginDto.UserName);
+            if (user != null && await _userManager.CheckPasswordAsync(user, loginDto.Password)) 
             {
                 var authClaims = new List<Claim>
                 {
@@ -64,6 +61,7 @@ namespace CommunityTraining.API.Controllers
                     Expires = token.ValidTo
                 });
             }
+
             return Unauthorized();
         }
 
@@ -71,7 +69,7 @@ namespace CommunityTraining.API.Controllers
         public async Task<IActionResult> Register(RegisterDTO registerDto)
         {
             var existingUser = await _userManager.FindByNameAsync(registerDto.UserName);
-            if (existingUser != null)
+            if (existingUser != null) 
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     new { Status = "Error", Message = "User creation failed. There is a user with the same name" });
@@ -84,13 +82,13 @@ namespace CommunityTraining.API.Controllers
                 SecurityStamp = Guid.NewGuid().ToString(),
             };
             var result = await _userManager.CreateAsync(newUser, registerDto.Password);
-            if (!result.Succeeded)
+            if (!result.Succeeded) 
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     new { Status = "Error", Message = "Error during user creation." });
             }
 
-            return Ok();
+            return Ok(new { Status = "Error", Message = "Error during user creation." });
         }
     }
 }
