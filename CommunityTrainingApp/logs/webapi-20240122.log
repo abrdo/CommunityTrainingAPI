@@ -1,0 +1,82 @@
+[2024-01-22 11:44:55.575 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-22 11:45:02.036 +01:00  INF]  Executed DbCommand (624ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-22 11:45:02.259 +01:00  INF]  Executed DbCommand (21ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-22 11:45:03.321 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-22 11:45:03.324 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-22 11:45:03.328 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-22 11:45:03.331 +01:00  INF]  Hosting environment: Development
+[2024-01-22 11:45:03.333 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-22 11:45:19.645 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-22 11:45:21.340 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 1707.4748ms
+[2024-01-22 11:45:21.580 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-22 11:45:21.623 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 38.6687ms
+[2024-01-22 11:45:22.208 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-22 11:45:23.908 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1699.6563ms
+[2024-01-22 11:45:24.300 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-22 11:45:24.962 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 662.5739ms
+[2024-01-22 11:46:54.863 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/api/resultstables - -
+[2024-01-22 11:46:55.805 +01:00  INF]  Executing endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-22 11:46:56.089 +01:00  INF]  Route matched with {action = "GetAll", controller = "ResultsTable"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[CommunityTrainingAPI.ViewModels.ResultsTableRowVM]] GetAll(CommunityTrainingAPI.Filter.GenericQueryOptions`1[CommunityTrainingAPI.Filter.CommunityTrainingFilter]) on controller CommunityTraining.API.Controllers.ResultsTableController (CommunityTrainingAPI).
+[2024-01-22 11:46:57.002 +01:00  INF]  GetAll called.
+[2024-01-22 11:46:57.617 +01:00  INF]  Executed DbCommand (181ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [ResultsTables] AS [r]
+ORDER BY [r].[Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[2024-01-22 11:46:57.665 +01:00  INF]  Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CommunityTrainingAPI.ViewModels.ResultsTableRowVM, CommunityTrainingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2024-01-22 11:46:57.724 +01:00  INF]  Executed action CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI) in 1617.8716ms
+[2024-01-22 11:46:57.730 +01:00  INF]  Executed endpoint 'CommunityTraining.API.Controllers.ResultsTableController.GetAll (CommunityTrainingAPI)'
+[2024-01-22 11:46:57.761 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/api/resultstables - - - 200 - application/json;+charset=utf-8 2916.4122ms
+[2024-01-22 11:47:45.165 +01:00  INF]  Request starting HTTP/2 DELETE https://localhost:7282/api/resultstables/8 - -
+[2024-01-22 11:47:45.224 +01:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2024-01-22 11:47:45.244 +01:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2024-01-22 11:47:45.251 +01:00  INF]  Request finished HTTP/2 DELETE https://localhost:7282/api/resultstables/8 - - - 401 0 - 86.1892ms
+[2024-01-22 22:57:02.266 +01:00  INF]  User profile is available. Using 'C:\Users\Domonkos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024-01-22 22:57:10.537 +01:00  INF]  Executed DbCommand (2,626ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-22 22:57:10.730 +01:00  INF]  Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+[2024-01-22 22:57:11.395 +01:00  INF]  Now listening on: https://localhost:7282
+[2024-01-22 22:57:11.397 +01:00  INF]  Now listening on: http://localhost:5282
+[2024-01-22 22:57:11.402 +01:00  INF]  Application started. Press Ctrl+C to shut down.
+[2024-01-22 22:57:11.404 +01:00  INF]  Hosting environment: Development
+[2024-01-22 22:57:11.407 +01:00  INF]  Content root path: C:\Users\Domonkos\Documents\PPKE_ITK_tanulmanyok\Mernokinfo_MSC\5. félév\dotNET\dotNET_homework\MyHomework\CommunityTrainingAPI\CommunityTrainingApp\CommunityTrainingApp
+[2024-01-22 22:57:27.578 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-22 22:57:28.531 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 982.7320ms
+[2024-01-22 22:57:28.583 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-22 22:57:28.596 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 13.4787ms
+[2024-01-22 22:57:28.649 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-22 22:57:28.799 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 148.9858ms
+[2024-01-22 22:57:28.965 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-22 22:57:29.469 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 503.7619ms
+[2024-01-22 23:30:17.079 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-22 23:30:17.079 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-22 23:30:17.339 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 276.6465ms
+[2024-01-22 23:30:17.715 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 660.0363ms
+[2024-01-22 23:30:17.900 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-22 23:30:18.603 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 701.7122ms
+[2024-01-22 23:30:28.280 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/ - -
+[2024-01-22 23:30:29.043 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/ - - - 404 0 - 763.5859ms
+[2024-01-22 23:30:35.453 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-22 23:30:35.459 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 5.5533ms
+[2024-01-22 23:30:43.064 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/index.html - -
+[2024-01-22 23:30:43.099 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/index.html - - - 200 - text/html;charset=utf-8 35.0063ms
+[2024-01-22 23:30:43.123 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_vs/browserLink - -
+[2024-01-22 23:30:43.123 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - -
+[2024-01-22 23:30:43.128 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 5.3857ms
+[2024-01-22 23:30:43.162 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.2900ms
+[2024-01-22 23:30:43.250 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-22 23:30:43.278 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 27.1101ms
+[2024-01-22 23:31:08.884 +01:00  INF]  Request starting HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - -
+[2024-01-22 23:31:08.963 +01:00  INF]  Request finished HTTP/2 GET https://localhost:7282/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 79.5600ms

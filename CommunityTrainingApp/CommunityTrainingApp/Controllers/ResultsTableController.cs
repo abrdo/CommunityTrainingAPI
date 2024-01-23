@@ -76,10 +76,10 @@ namespace CommunityTraining.API.Controllers
 
         // PUT api/<ResultsTablesController>/5
         [HttpPut("resultstables/{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] UpdateResultsTableDTO resultsTable)
+        public async Task<IActionResult> Put(int id, [FromBody] UpdateResultsTableDTO newResultsTable)
         {
             _logger.LogInformation($"Put called.");
-            return await _resultsTableService.UpdateResultsTableAsync(id, resultsTable)
+            return await _resultsTableService.UpdateResultsTableAsync(id, newResultsTable)
                 ? NoContent()
                 : NotFound();
         }
