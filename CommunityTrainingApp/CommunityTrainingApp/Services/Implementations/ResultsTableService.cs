@@ -117,13 +117,25 @@ namespace CommunityTrainingAPI.Services.Implementations
                 .ToListAsync();
         }
 
-        public async Task<bool> UpdateResultsTableAsync(int id, UpdateResultsTableDTO x)
+        public async Task<bool> UpdateResultsTableAsync(int id, UpdateResultsTableDTO rtNewDto)
         {
-            var m = _mapper.Map<ResultsTable>(x);
+            var rtToUpdate = _context
+                .ResultsTables
+                .SingleOrDefault(x => x.Id == id);
+            if (rtToUpdate == null)
+            {
+                return false;
+            }
+            // _context.Entry(rtToUpdate).State = EntityState.Modified;
+            _mapper.Map(rtNewDto, rtToUpdate);
+            // _mapper.Map(rtToUpdate, rtNewDto);
 
-            _context.Entry(m).State = EntityState.Modified;
+            ResultsTable rtToUpdate2 = _context
+                .ResultsTables
+                .Where(x => x.Id == id)
+                .SingleOrDefault();
+
             var n = await _context.SaveChangesAsync();
-
             return n == 1;
         }
     }
