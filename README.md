@@ -20,7 +20,7 @@ after every database change invoking change in the code:
 2.2 	update-database
 
 
-# if new database (or application) creation dont forget:
+# if you make new database (or application) creation based on this project dont forget:
 in appsettings.json:
 refactor the database nam "CommunityTrainingData" (2 occurance)
 refactor in program.cs the reference for it (reactor "CommunityTrainingData")
