@@ -1,0 +1,10 @@
+# Visual Studio
+*.vs/
+*.suo
+*.userosscache
+
+# in the project folder
+*/logs/
+*/Migrations/
+*/bin/
+*/obj/
